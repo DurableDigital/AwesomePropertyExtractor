@@ -32,7 +32,8 @@ namespace APE.Umbraco.Core
 						var doctypeAlias = record["DocType"].ToString();
 						var doctypeAliasText = Helpers.NameReplacement(doctypeAlias);
 
-						string propertyTypeAlias = Helpers.GetPropertyType(record["propertyTypeId"].ToString());
+						string propertyTypeId = record["propertyTypeId"].ToString();
+						string propertyTypeAlias = Helpers.GetPropertyType(propertyTypeId);
 
 						var propertyAlias = record["PropertyAlias"].ToString();
 						var propertyAliasText = Helpers.NameReplacement(propertyAlias);
@@ -51,7 +52,8 @@ namespace APE.Umbraco.Core
 							ParentDocType = Helpers.NameReplacement(record["ParentDocType"].ToString()),
 							PropertyDescription = record["PropertyDescription"].ToString().Replace(Environment.NewLine, " "),
 							PropertyType = record["PropertyType"].ToString(),
-							PropertyTypeAlias = propertyTypeAlias
+							PropertyTypeAlias = propertyTypeAlias,
+							PropertyTypeId = propertyTypeId
 						};
 					}
 				}

@@ -16,5 +16,6 @@ namespace APE.Umbraco.Core.DTO
 		public string PropertyDescription { get; set; }
 		public string PropertyType { get; set; }
 		public string PropertyTypeAlias { get; set; }
+		public string PropertyTypeId { get; set; }
 	}
 }
